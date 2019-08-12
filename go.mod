@@ -1,4 +1,4 @@
-module github.com/Talend/vault_exporter
+module github.com/damoun/vault_exporter
 
 go 1.12
 
