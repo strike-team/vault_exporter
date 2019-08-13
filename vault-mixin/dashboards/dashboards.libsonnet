@@ -79,7 +79,7 @@ local panel_settings = {
       .addRow(
         g.row('Vault Server')
         .addPanel(
-          g.panel('QPS') +
+          g.panel('Queries per Second') +
           g.queryPanel('sum(rate(vault_route_count{job="$job"}[1m])) by (instance)', '{{instance}}') +
           g.stack
         )
@@ -94,7 +94,7 @@ local panel_settings = {
       .addRow(
         g.row('Etcd Backend')
         .addPanel(
-          g.panel('QPS') +
+          g.panel('Queries per Second') +
           g.queryPanel('sum(rate(vault_etcd_count{job="$job"}[1m])) by (instance)', '{{instance}}') +
           g.stack
         )
