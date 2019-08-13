@@ -105,6 +105,21 @@ local panel_settings = {
           g.queryPanel('sum(rate(vault_etcd_sum{job="$job"}[5m])) by (instance) / sum(rate(vault_etcd_count{job="$job"}[5m])) by (instance)', 'Average {{instance}}') +
           { yaxes: g.yaxes('ms') }
         )
+      )
+      .addRow(
+        g.row('Consul Backend')
+        .addPanel(
+          g.panel('Queries per Second') +
+          g.queryPanel('sum(rate(vault_consul_list_count{job="$job"}[1m])) by (instance)', '{{instance}}') +
+          g.stack
+        )
+        .addPanel(
+          g.panel('Latency') +
+          g.queryPanel('max(vault_consul_list{job="$job", quantile="0.99"}) by (instance)', '99th Percentile {{instance}}') +
+          g.queryPanel('max(vault_consul_list{job="$job", quantile="0.5"}) by (instance)', '50th Percentile {{instance}}') +
+          g.queryPanel('sum(rate(vault_consul_list_sum{job="$job"}[5m])) by (instance) / sum(rate(vault_consul_list_count{job="$job"}[5m])) by (instance)', 'Average {{instance}}') +
+          { yaxes: g.yaxes('ms') }
+        )
       ),
   },
 }
