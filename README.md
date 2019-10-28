@@ -1,6 +1,6 @@
 # Vault Exporter
 
-[![CircleCI](https://circleci.com/gh/Damoun/vault_exporter/tree/master.svg?style=shield)][circleci]
+[![CircleCI](https://circleci.com/gh/damoun/vault_exporter/tree/master.svg?style=shield)][circleci]
 [![Docker Pulls](https://img.shields.io/docker/pulls/damoun/vault-exporter.svg?maxAge=604800)][hub]
 
 Export [Hashicorp Vault](https://github.com/hashicorp/vault) health to [Prometheus](https://github.com/prometheus/prometheus).
