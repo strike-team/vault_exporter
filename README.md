@@ -1,7 +1,7 @@
 # Vault Exporter
 
-[![CircleCI](https://circleci.com/gh/damoun/vault_exporter/tree/master.svg?style=shield)][circleci]
-[![Docker Pulls](https://img.shields.io/docker/pulls/damoun/vault-exporter.svg?maxAge=604800)][hub]
+[![CircleCI](https://circleci.com/gh/vptech/vault_exporter/tree/master.svg?style=shield)][circleci]
+[![Docker Pulls](https://img.shields.io/docker/pulls/vptech/vault-exporter.svg?maxAge=604800)][hub]
 
 Export [Hashicorp Vault](https://github.com/hashicorp/vault) health to [Prometheus](https://github.com/prometheus/prometheus).
 
@@ -61,17 +61,17 @@ __Is my Vault Up?__
 
 ## Using Docker
 
-You can deploy this exporter using the [damoun/vault-exporter](https://hub.docker.com/r/damoun/vault-exporter/) Docker image.
+You can deploy this exporter using the [vptech/vault-exporter](https://hub.docker.com/r/vptech/vault-exporter/) Docker image.
 
 For example:
 
 ```bash
-docker pull damoun/vault-exporter
+docker pull vptech/vault-exporter
 
 docker run -d -p 9410:9410 \
         --env VAULT_ADDR=http://127.0.0.1:8200 \
-        damoun/vault-exporter
+        vptech/vault-exporter
 ```
 
-[circleci]: https://circleci.com/gh/damoun/vault_exporter
-[hub]: https://hub.docker.com/r/damoun/vault-exporter/
+[circleci]: https://circleci.com/gh/vptech/vault_exporter
+[hub]: https://hub.docker.com/r/vptech/vault-exporter/

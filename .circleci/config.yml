@@ -132,7 +132,7 @@ jobs:
     - setup_build_environment
     - publish_images:
         registry: docker.io
-        organization: damoun
+        organization: vptech
         login_variable: DOCKER_LOGIN
         password_variable: DOCKER_PASSWORD
 
@@ -150,7 +150,7 @@ jobs:
         destination: releases
     - publish_release_images:
         registry: docker.io
-        organization: damoun
+        organization: vptech
         login_variable: DOCKER_LOGIN
         password_variable: DOCKER_PASSWORD
 
